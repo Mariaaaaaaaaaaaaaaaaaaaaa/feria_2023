@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"> 
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">                
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      
+    <link rel="stylesheet" href="css/templatemo-style.css">                                  
+
+</head>
+
+<body class="tm-bg-img-content">
+
+    <div class="tm-bg-img-header">
+        <div class="container-fluid">
+            
+            <div id="top" class="tm-header-container">
+                
+                <!-- 1. Site Header -->
+                <div class="row tm-site-header">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-xs-center">
+
+                        <h1 class="tm-site-title">Game Corner</h1>
+                        <p class="tm-site-description">Juegos de Aprendizaje</p>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <!-- 2. Navigation -->
+                <div class="row tm-navbar-row tm-navbar-row-absolute">
+                    <div class="tm-navbar-container">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                            <nav class="navbar navbar-full">
+                                    
+                                <div class="text-xs-center tm-navbar-rounded" id="tmNavbar">                            
+
+                                    <ul class="nav navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#top">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tm-section-1">Math Game</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tm-section-3">English Game</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tm-section-4">Geo Game</a>
+                                        </li>
+                                        
+                                    </ul>
+
+                                </div>
+                              
+                            </nav>
+                        </div>
+                    </div>                      
+                </div>   
+
+            </div> 
+            
+
+            <div class="row" id="tm-section-1">
+                
+                <div class="container">
+                        </div>
+                        <div class="main">
+                            <div class="juego">
+                                <a href="./Main juegos/Main_Matemático.zip" >
+                                    <img class="" src="Mate juego 1.png" alt="imagen del juego 1">
+                                </a>
+
+                            </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 tm-2-col-text">
+                            <h2 class="tm-2-col-text-title">Juego Matematico</h2>
+                            <p class="tm-2-col-text-description">
+                                Este juego consiste en que tenemos que contestar las preguntas que nos aparecen 
+                                e ir acumulando puntos.
+                            </p>
+                        </div>
+                        
+                    </section>
+
+                </div>                
+
+            </div> 
+
+        </div>               
+    </div> 
+        
+    <div class="container-fluid">
+        
+        <!-- Plan -->
+        <div class="row tm-section" id="tm-section-3">
+        </div>
+        <div class="main">
+            <div class="juego">
+                <a href="./Main juegos/main_ingles.zip" >
+                    <img class="" src="ingles-juego-2.png" alt="imagen del juego 2">
+                </a>
+
+            </div>
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 tm-2-col-text">
+                <h2 class="tm-section-title">English Game</h2>
+                <p class="tm-section-subtitle">
+                   Este juego conciste en que debemos de responder las palabras que nos aparecen y traducirlo de español a ingles e ir acumulando puntos
+                </p>    
+
+    </div> <!-- container-fluid -->        
+
+    <div class="tm-bg-img-content">
+        <div class="container-fluid">
+            <div class="row" id="tm-section-4">
+                <div class="main">
+                    <div class="juego">
+                        <a href="./Main juegos/main_geo.zip" >
+                            <img class="" src="geo jueg0 3.png" alt="imagen del juego 3">
+                        </a>
+        
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 tm-2-col-text">
+                            
+                    <h2 class="tm-section-title">Geo Game</h2>
+                    <p class="tm-section-subtitle tm-section-subtitle-contact">
+                   Este juego consiste en responder las preguntas de Geografia que nos preguntan e ir acumulando puntos.
+
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+    
+    </div> <!-- tm-section-contact-form -->
+        
+    <!-- load JS files -->
+    <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+    <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+
+    <script>
+
+        function prepareMenuForDesktop() {
+
+            var navbarHeight = 0;
+            
+            // For screens greater than 767
+            if($(window).width() > 767) {
+
+                // target at which the menu bar changes to sticky
+                var target = $("#tm-section-1").offset().top - 100;
+
+                // window scroll
+                $(window).scroll(function(){
+
+                    if($(this).scrollTop() > target) {                            
+                        $(".tm-navbar-row").addClass("sticky");                            
+                    }
+                    else {
+                        $(".tm-navbar-row").removeClass("sticky");
+                    }     
+
+                }); 
+
+                navbarHeight = 56;
+            }
+
+            // Single Page Nav
+            $('#tmNavbar').singlePageNav({
+               'currentClass' : "active",
+                offset : navbarHeight,
+                'filter': ':not(.external)'
+            });  
+        }  
+   
+        $(document).ready(function(){                 
+
+            prepareMenuForDesktop();
+
+            // On window resize, prepare menu
+            $(window).resize(function(){
+                prepareMenuForDesktop();                 
+                                  
+            });       
+        });
+
+    </script>             
+
+</body>
+</html>
